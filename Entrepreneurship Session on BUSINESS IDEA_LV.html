@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atelier Idée de Business - BIT Entrepreneurship Club</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .slide { display: none; animation: fadeIn 0.5s; }
+        .slide.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; }
+        
+        /* Timer Animation */
+        .timer-bar { transition: width 1s linear; }
+    </style>
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center p-4">
+
+    <!-- Container Principal -->
+    <div class="w-full max-w-6xl bg-white text-gray-800 rounded-2xl shadow-2xl overflow-hidden relative min-h-[600px] flex flex-col">
+        
+        <!-- Header -->
+        <div class="bg-blue-900 text-white p-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <i class="fas fa-lightbulb text-yellow-400 text-2xl"></i>
+                <span class="font-bold text-xl tracking-wider">BIT ENTREPRENEURSHIP CLUB</span>
+            </div>
+            <div class="text-sm opacity-80">Session Interactive 2025</div>
+        </div>
+
+        <!-- Content Area -->
+        <div class="flex-1 p-8 relative">
+            
+            <!-- SLIDE 1: INTRO -->
+            <div class="slide active">
+                <div class="h-full flex flex-col items-center justify-center text-center space-y-6">
+                    <span class="bg-blue-100 text-blue-800 px-4 py-1 rounded-full font-bold uppercase text-sm">Workshop 1H</span>
+                    <h1 class="text-5xl md:text-7xl font-extrabold text-blue-900 leading-tight">
+                        TROUVER UNE IDÉE<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">DE GÉNIE</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 max-w-2xl">
+                        Arrêtez de chercher l'idée du siècle. Commencez par résoudre un vrai problème.
+                    </p>
+                    <div class="mt-8 flex gap-4">
+                        <div class="flex items-center gap-2 text-gray-500"><i class="fas fa-clock"></i> 60 Min</div>
+                        <div class="flex items-center gap-2 text-gray-500"><i class="fas fa-users"></i> Interactif</div>
+                        <div class="flex items-center gap-2 text-gray-500"><i class="fas fa-rocket"></i> 100% Pratique</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 2: ICEBREAKER -->
+            <div class="slide">
+                <div class="h-full flex flex-col items-center justify-center text-center">
+                    <div class="bg-red-100 p-6 rounded-full mb-6 animate-bounce">
+                        <i class="fas fa-poo text-red-500 text-6xl"></i>
+                    </div>
+                    <h2 class="text-4xl font-bold text-gray-800 mb-4">ICEBREAKER : LA PIRE IDÉE</h2>
+                    <p class="text-2xl text-gray-600 mb-8">Quelle est l'idée de business la plus <span class="font-bold text-red-600">stupide</span> que vous puissiez imaginer pour le Burkina ?</p>
+                    <div class="bg-gray-100 p-6 rounded-xl w-full max-w-3xl">
+                        <p class="font-mono text-lg text-gray-500">Exemples : "Vendre du sable au Sahara", "Une application de rencontre pour les chèvres"...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 3: CONCEPT -->
+            <div class="slide">
+                <div class="grid grid-cols-2 h-full gap-8 items-center">
+                    <div class="space-y-6">
+                        <h2 class="text-4xl font-bold text-blue-900">IDÉE vs BUSINESS</h2>
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-4 p-4 bg-gray-50 rounded-lg">
+                                <i class="fas fa-brain text-purple-500 text-3xl mt-1"></i>
+                                <div>
+                                    <h3 class="font-bold text-xl">L'Idée (10%)</h3>
+                                    <p class="text-gray-600">C'est juste une théorie. C'est gratuit. Tout le monde en a.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4 p-4 bg-green-50 rounded-lg border-2 border-green-200">
+                                <i class="fas fa-cogs text-green-600 text-3xl mt-1"></i>
+                                <div>
+                                    <h3 class="font-bold text-xl text-green-800">L'Exécution (90%)</h3>
+                                    <p class="text-gray-700">C'est la structure, les clients qui paient, la réalité du terrain.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-blue-900 rounded-xl p-8 text-white flex flex-col justify-center items-center text-center">
+                        <i class="fas fa-quote-left text-4xl opacity-30 mb-4"></i>
+                        <p class="text-2xl italic font-light">"Uber n'a pas inventé le taxi. Ils ont inventé la façon de le commander."</p>
+                        <div class="mt-6 font-bold text-yellow-400">— L'Innovation n'est pas l'Invention</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 4: SOURCES -->
+            <div class="slide">
+                <h2 class="text-3xl font-bold text-center mb-8">OÙ TROUVER L'INSPIRATION AU BURKINA ?</h2>
+                <div class="grid grid-cols-3 gap-6 h-3/4">
+                    <div class="bg-red-50 p-6 rounded-xl hover:shadow-lg transition cursor-pointer flex flex-col items-center text-center">
+                        <i class="fas fa-angry text-red-500 text-5xl mb-4"></i>
+                        <h3 class="font-bold text-xl mb-2">Les Frustrations</h3>
+                        <p class="text-sm">"C'est trop lent", "C'est trop cher", "C'est compliqué".</p>
+                    </div>
+                    <div class="bg-blue-50 p-6 rounded-xl hover:shadow-lg transition cursor-pointer flex flex-col items-center text-center">
+                        <i class="fas fa-eye text-blue-500 text-5xl mb-4"></i>
+                        <h3 class="font-bold text-xl mb-2">L'Observation</h3>
+                        <p class="text-sm">Regardez les files d'attente. Regardez les carnets papier.</p>
+                    </div>
+                    <div class="bg-yellow-50 p-6 rounded-xl hover:shadow-lg transition cursor-pointer flex flex-col items-center text-center">
+                        <i class="fas fa-copy text-yellow-600 text-5xl mb-4"></i>
+                        <h3 class="font-bold text-xl mb-2">L'Importation</h3>
+                        <p class="text-sm">Qu'est-ce qui marche à Accra ou Abidjan et qui manque ici ?</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 5: ACTIVITY 1 TIMER -->
+            <div class="slide">
+                <div class="h-full flex flex-col items-center justify-center">
+                    <h2 class="text-3xl font-bold mb-4 uppercase text-blue-900">Activité 1 : Le Détective</h2>
+                    <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-200 w-full max-w-4xl text-center">
+                        <p class="text-2xl mb-8">Identifiez <strong>3 problèmes irritants</strong> que vous avez rencontrés cette semaine.</p>
+                        
+                        <!-- Timer Interactive -->
+                        <div class="text-8xl font-mono font-bold text-gray-800 mb-4" id="timer1">10:00</div>
+                        <div class="w-full bg-gray-200 rounded-full h-4 mb-8">
+                            <div class="bg-blue-600 h-4 rounded-full timer-bar" id="progress1" style="width: 100%"></div>
+                        </div>
+                        
+                        <div class="flex justify-center gap-4">
+                            <button onclick="startTimer(10, 'timer1', 'progress1')" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg font-bold shadow transition">
+                                <i class="fas fa-play mr-2"></i> Lancer
+                            </button>
+                            <button onclick="resetTimer(10, 'timer1', 'progress1')" class="bg-gray-500 hover:bg-gray-600 text-white px-6 py-2 rounded-lg font-bold shadow transition">
+                                <i class="fas fa-redo mr-2"></i> Reset
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 6: ACTIVITY 2 MASHUP -->
+            <div class="slide">
+                <div class="h-full flex flex-col">
+                    <h2 class="text-3xl font-bold mb-6 text-center text-purple-900">Activité 2 : Le Mashup Solution</h2>
+                    <div class="grid grid-cols-2 gap-8 flex-1">
+                        <div class="bg-gray-100 p-6 rounded-xl flex flex-col justify-center">
+                            <h3 class="font-bold text-xl mb-4 text-gray-600 text-center">Choisissez 1 Problème</h3>
+                            <div class="space-y-2 text-center text-lg">
+                                <div class="p-3 bg-white shadow rounded">Attente à l'hôpital</div>
+                                <div class="p-3 bg-white shadow rounded">Trouver un logement</div>
+                                <div class="p-3 bg-white shadow rounded">Gestion des déchets</div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col justify-center items-center">
+                            <div class="text-6xl text-purple-500 mb-4">+</div>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                         <!-- Center content overlay if needed, handled by grid above -->
+                    </div>
+                    <div class="grid grid-cols-2 gap-8 flex-1 mt-4">
+                         <div class="col-start-2 bg-purple-100 p-6 rounded-xl flex flex-col justify-center">
+                            <h3 class="font-bold text-xl mb-4 text-purple-800 text-center">Appliquez 1 Techno/Modèle</h3>
+                            <div class="space-y-2 text-center text-lg">
+                                <div class="p-3 bg-white shadow rounded text-purple-700">WhatsApp / SMS</div>
+                                <div class="p-3 bg-white shadow rounded text-purple-700">Livraison à domicile</div>
+                                <div class="p-3 bg-white shadow rounded text-purple-700">Abonnement</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 text-center">
+                         <div class="text-4xl font-mono font-bold text-purple-600" id="timer2">10:00</div>
+                         <button onclick="startTimer(10, 'timer2', null)" class="mt-2 text-sm underline text-gray-500">Lancer Chrono</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 7: PITCH TEMPLATE -->
+            <div class="slide">
+                <div class="h-full flex flex-col items-center justify-center text-center">
+                    <h2 class="text-4xl font-bold mb-8">LA FORMULE MAGIQUE DU PITCH</h2>
+                    <div class="bg-gray-50 p-8 rounded-2xl border-2 border-dashed border-gray-300 max-w-4xl">
+                        <p class="text-3xl leading-relaxed text-gray-800">
+                            "Nous aidons <span class="text-blue-600 font-bold underline decoration-wavy">[QUI ?]</span><br>
+                            à résoudre <span class="text-red-600 font-bold underline decoration-wavy">[QUEL PROBLÈME ?]</span><br>
+                            grâce à <span class="text-green-600 font-bold underline decoration-wavy">[QUELLE SOLUTION ?]</span>."
+                        </p>
+                    </div>
+                    <p class="mt-8 text-xl text-gray-500">Préparez-vous à présenter en 30 secondes !</p>
+                </div>
+            </div>
+
+            <!-- SLIDE 8: CONCLUSION -->
+            <div class="slide">
+                <div class="h-full flex flex-col items-center justify-center text-center bg-blue-900 rounded-xl text-white p-8">
+                    <h2 class="text-5xl font-bold mb-6 text-yellow-400">PASSEZ À L'ACTION !</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl mt-8">
+                        <div class="bg-white/10 p-6 rounded-lg backdrop-blur">
+                            <i class="fas fa-comments text-3xl mb-4 text-blue-300"></i>
+                            <h3 class="font-bold mb-2">Parlez-en</h3>
+                            <p class="text-sm opacity-80">À 5 personnes demain. Ne gardez pas l'idée secrète.</p>
+                        </div>
+                        <div class="bg-white/10 p-6 rounded-lg backdrop-blur">
+                            <i class="fas fa-pencil-ruler text-3xl mb-4 text-green-300"></i>
+                            <h3 class="font-bold mb-2">Maquettez</h3>
+                            <p class="text-sm opacity-80">Sur papier. Dessinez votre solution.</p>
+                        </div>
+                        <div class="bg-white/10 p-6 rounded-lg backdrop-blur">
+                            <i class="fas fa-users text-3xl mb-4 text-purple-300"></i>
+                            <h3 class="font-bold mb-2">Rejoignez-nous</h3>
+                            <p class="text-sm opacity-80">Prochaine session : Le Prototype.</p>
+                        </div>
+                    </div>
+                    <h3 class="mt-12 text-xl opacity-75">Merci à tous !</h3>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer Navigation -->
+        <div class="bg-gray-50 p-4 border-t border-gray-200 flex justify-between items-center">
+            <button onclick="changeSlide(-1)" class="text-gray-500 hover:text-blue-600 px-4 py-2 font-semibold">
+                <i class="fas fa-arrow-left mr-2"></i> Précédent
+            </button>
+            <div class="flex gap-2" id="indicators">
+                <!-- Dots generated by JS -->
+            </div>
+            <button onclick="changeSlide(1)" class="bg-blue-600 text-white px-6 py-2 rounded-lg font-bold hover:bg-blue-700 shadow-md transition">
+                Suivant <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const indicatorsContainer = document.getElementById('indicators');
+        let timerInterval;
+
+        // Init Indicators
+        slides.forEach((_, idx) => {
+            const dot = document.createElement('div');
+            dot.className = `h-2 w-2 rounded-full ${idx === 0 ? 'bg-blue-600 w-6' : 'bg-gray-300'} transition-all duration-300`;
+            indicatorsContainer.appendChild(dot);
+        });
+
+        function changeSlide(direction) {
+            slides[currentSlide].classList.remove('active');
+            updateDots(currentSlide, false);
+            
+            currentSlide += direction;
+            
+            if (currentSlide >= slides.length) currentSlide = 0;
+            if (currentSlide < 0) currentSlide = slides.length - 1;
+            
+            slides[currentSlide].classList.add('active');
+            updateDots(currentSlide, true);
+        }
+
+        function updateDots(index, isActive) {
+            const dots = indicatorsContainer.children;
+            if (isActive) {
+                dots[index].classList.remove('bg-gray-300');
+                dots[index].classList.add('bg-blue-600', 'w-6');
+            } else {
+                dots[index].classList.remove('bg-blue-600', 'w-6');
+                dots[index].classList.add('bg-gray-300');
+            }
+        }
+
+        // Timer Logic
+        function startTimer(minutes, displayId, barId) {
+            clearInterval(timerInterval);
+            let time = minutes * 60;
+            const display = document.getElementById(displayId);
+            const bar = barId ? document.getElementById(barId) : null;
+            const initialTime = time;
+
+            timerInterval = setInterval(() => {
+                const min = Math.floor(time / 60);
+                const sec = time % 60;
+                display.textContent = `${min < 10 ? '0' : ''}${min}:${sec < 10 ? '0' : ''}${sec}`;
+                
+                if (bar) {
+                    const percentage = (time / initialTime) * 100;
+                    bar.style.width = `${percentage}%`;
+                    if(percentage < 20) bar.classList.replace('bg-blue-600', 'bg-red-500');
+                }
+
+                if (--time < 0) {
+                    clearInterval(timerInterval);
+                    display.textContent = "TEMPS ÉCOULÉ !";
+                    if(bar) bar.style.width = "0%";
+                    // Optional: Play sound
+                }
+            }, 1000);
+        }
+
+        function resetTimer(minutes, displayId, barId) {
+            clearInterval(timerInterval);
+            document.getElementById(displayId).textContent = `${minutes < 10 ? '0' : ''}${minutes}:00`;
+            if (barId) {
+                const bar = document.getElementById(barId);
+                bar.style.width = "100%";
+                bar.classList.remove('bg-red-500');
+                bar.classList.add('bg-blue-600');
+            }
+        }
+
+        // Keyboard Nav
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') changeSlide(1);
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+        });
+    </script>
+</body>
+</html>
