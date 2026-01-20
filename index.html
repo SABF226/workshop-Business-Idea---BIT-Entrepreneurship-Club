@@ -30,8 +30,6 @@
       body {
         font-family: "Segoe UI", system-ui, sans-serif;
       }
-
-      /* Timer Animation */
       .timer-bar {
         transition: width 1s linear;
       }
@@ -40,11 +38,9 @@
   <body
     class="bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center p-2 sm:p-4"
   >
-    <!-- Container Principal -->
     <div
       class="w-full max-w-6xl bg-white text-gray-800 rounded-xl sm:rounded-2xl shadow-2xl overflow-hidden relative flex flex-col"
     >
-      <!-- Header -->
       <div
         class="bg-blue-900 text-white p-3 sm:p-4 flex flex-col sm:flex-row justify-between items-center gap-2"
       >
@@ -54,12 +50,31 @@
             >BIT ENTREPRENEURSHIP CLUB</span
           >
         </div>
-        <div class="text-xs sm:text-sm opacity-80">
-          Session Interactive 2025
+        <div class="flex items-center gap-3">
+          <span
+            data-fr="Session Interactive 2025"
+            data-en="Interactive Session 2025"
+            >Session Interactive 2025</span
+          >
+          <!-- Language Toggle Switch -->
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-bold" id="frLabel">FR</span>
+            <button
+              onclick="toggleLanguage()"
+              class="relative w-12 h-6 bg-gray-300 rounded-full transition-colors duration-300 focus:outline-none"
+              id="langToggle"
+            >
+              <span
+                class="absolute left-0.5 top-0.5 w-5 h-5 bg-white rounded-full shadow transition-transform duration-300 flex items-center justify-center"
+                id="toggleKnob"
+                ><i class="fas fa-globe text-blue-600 text-[8px]"></i
+              ></span>
+            </button>
+            <span class="text-xs font-bold text-gray-400" id="enLabel">EN</span>
+          </div>
         </div>
       </div>
 
-      <!-- Content Area -->
       <div class="flex-1 p-4 sm:p-8 relative">
         <!-- SLIDE 1: INTRO -->
         <div class="slide active">
@@ -68,44 +83,62 @@
           >
             <span
               class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full font-bold uppercase text-xs sm:text-sm"
+              data-fr="Workshop 1H"
+              data-en="1H Workshop"
               >Workshop 1H</span
             >
             <h1
               class="text-3xl sm:text-5xl md:text-7xl font-extrabold text-blue-900 leading-tight"
             >
-              TROUVER UNE IDÉE<br /><span
+              <span data-fr="TROUVER UNE IDÉE" data-en="FIND A"
+                >TROUVER UNE IDÉE</span
+              ><br />
+              <span
                 class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+                data-fr="DE GÉNIE"
+                data-en="GENIUS IDEA"
                 >DE GÉNIE</span
               >
             </h1>
-            <p class="text-base sm:text-xl text-gray-600 max-w-2xl px-2">
+            <p
+              class="text-base sm:text-xl text-gray-600 max-w-2xl px-2"
+              data-fr="Arrêtez de chercher l'idée du siècle. Commencez par résoudre un vrai problème."
+              data-en="Stop searching for the century's idea. Start by solving a real problem."
+            >
               Arrêtez de chercher l'idée du siècle. Commencez par résoudre un
               vrai problème.
             </p>
             <div
               class="mt-4 sm:mt-8 flex flex-wrap justify-center gap-3 sm:gap-4"
             >
-              <div
+              <span
                 class="flex items-center gap-2 text-gray-500 text-xs sm:text-base"
+                data-fr="60 Min"
+                data-en="60 Min"
+                ><i class="fas fa-clock"></i> 60 Min</span
               >
-                <i class="fas fa-clock"></i> 60 Min
-              </div>
-              <div
+              <span
                 class="flex items-center gap-2 text-gray-500 text-xs sm:text-base"
+                data-fr="Interactif"
+                data-en="Interactive"
+                ><i class="fas fa-users"></i> Interactif</span
               >
-                <i class="fas fa-users"></i> Interactif
-              </div>
-              <div
+              <span
                 class="flex items-center gap-2 text-gray-500 text-xs sm:text-base"
+                data-fr="100% Pratique"
+                data-en="100% Practice"
+                ><i class="fas fa-rocket"></i> 100% Pratique</span
               >
-                <i class="fas fa-rocket"></i> 100% Pratique
-              </div>
             </div>
             <div
               class="mt-4 sm:mt-6 flex items-center justify-center gap-2 text-blue-600 font-medium text-xs sm:text-base"
             >
               <i class="fas fa-user-tie"></i>
-              <span>Facilité par: Abdoul Ben SANON</span>
+              <span
+                data-fr="Facilité par: Abdoul Ben SANON"
+                data-en="Facilitated by: Abdoul Ben SANON"
+                >Facilité par: Abdoul Ben SANON</span
+              >
             </div>
           </div>
         </div>
@@ -122,16 +155,26 @@
             </div>
             <h2
               class="text-2xl sm:text-4xl font-bold text-gray-800 mb-3 sm:mb-4"
+              data-fr="ICEBREAKER : LA PIRE IDÉE"
+              data-en="ICEBREAKER: THE WORST IDEA"
             >
               ICEBREAKER : LA PIRE IDÉE
             </h2>
-            <p class="text-lg sm:text-2xl text-gray-600 mb-4 sm:mb-8 px-2">
+            <p
+              class="text-lg sm:text-2xl text-gray-600 mb-4 sm:mb-8 px-2"
+              data-fr="Quelle est l'idée de business la plus stupide que vous puissiez imaginer pour le Burkina ?"
+              data-en="What's the stupidest business idea you can imagine for Burkina?"
+            >
               Quelle est l'idée de business la plus
               <span class="font-bold text-red-600">stupide</span> que vous
               puissiez imaginer pour le Burkina ?
             </p>
             <div class="bg-gray-100 p-4 sm:p-6 rounded-xl w-full max-w-3xl">
-              <p class="font-mono text-xs sm:text-lg text-gray-500">
+              <p
+                class="font-mono text-xs sm:text-lg text-gray-500"
+                data-fr="Exemples : Vendre du sable au Sahara, Une application de rencontre pour les chèvres..."
+                data-en="Examples: Selling sand in the Sahara, A dating app for goats..."
+              >
                 Exemples : "Vendre du sable au Sahara", "Une application de
                 rencontre pour les chèvres"...
               </p>
@@ -145,7 +188,11 @@
             class="grid grid-cols-1 lg:grid-cols-2 h-full gap-6 sm:gap-8 items-center"
           >
             <div class="space-y-4 sm:space-y-6">
-              <h2 class="text-2xl sm:text-4xl font-bold text-blue-900">
+              <h2
+                class="text-2xl sm:text-4xl font-bold text-blue-900"
+                data-fr="IDÉE vs BUSINESS"
+                data-en="IDEA vs BUSINESS"
+              >
                 IDÉE vs BUSINESS
               </h2>
               <div class="space-y-3 sm:space-y-4">
@@ -156,8 +203,18 @@
                     class="fas fa-brain text-purple-500 text-2xl sm:text-3xl mt-1"
                   ></i>
                   <div>
-                    <h3 class="font-bold text-lg sm:text-xl">L'Idée (10%)</h3>
-                    <p class="text-sm sm:text-gray-600">
+                    <h3
+                      class="font-bold text-lg sm:text-xl"
+                      data-fr="L'Idée (10%)"
+                      data-en="The Idea (10%)"
+                    >
+                      L'Idée (10%)
+                    </h3>
+                    <p
+                      class="text-sm sm:text-gray-600"
+                      data-fr="C'est juste une théorie. C'est gratuit. Tout le monde en a."
+                      data-en="It's just a theory. It's free. Everyone has one."
+                    >
                       C'est juste une théorie. C'est gratuit. Tout le monde en
                       a.
                     </p>
@@ -170,10 +227,18 @@
                     class="fas fa-cogs text-green-600 text-2xl sm:text-3xl mt-1"
                   ></i>
                   <div>
-                    <h3 class="font-bold text-lg sm:text-xl text-green-800">
+                    <h3
+                      class="font-bold text-lg sm:text-xl text-green-800"
+                      data-fr="L'Exécution (90%)"
+                      data-en="The Execution (90%)"
+                    >
                       L'Exécution (90%)
                     </h3>
-                    <p class="text-sm sm:text-gray-700">
+                    <p
+                      class="text-sm sm:text-gray-700"
+                      data-fr="C'est la structure, les clients qui paient, la réalité du terrain."
+                      data-en="It's the structure, paying customers, ground reality."
+                    >
                       C'est la structure, les clients qui paient, la réalité du
                       terrain.
                     </p>
@@ -187,11 +252,19 @@
               <i
                 class="fas fa-quote-left text-3xl sm:text-4xl opacity-30 mb-4"
               ></i>
-              <p class="text-lg sm:text-2xl italic font-light">
+              <p
+                class="text-lg sm:text-2xl italic font-light"
+                data-fr="Uber n'a pas inventé le taxi. Ils ont inventé la façon de le commander."
+                data-en="Uber didn't invent the taxi. They invented how to order one."
+              >
                 "Uber n'a pas inventé le taxi. Ils ont inventé la façon de le
                 commander."
               </p>
-              <div class="mt-4 sm:mt-6 font-bold text-yellow-400">
+              <div
+                class="mt-4 sm:mt-6 font-bold text-yellow-400"
+                data-fr="— L'Innovation n'est pas l'Invention"
+                data-en="— Innovation is not Invention"
+              >
                 — L'Innovation n'est pas l'Invention
               </div>
             </div>
@@ -202,6 +275,8 @@
         <div class="slide">
           <h2
             class="text-xl sm:text-3xl font-bold text-center mb-6 sm:mb-8 px-2"
+            data-fr="OÙ TROUVER L'INSPIRATION AU BURKINA ?"
+            data-en="WHERE TO FIND INSPIRATION IN BURKINA?"
           >
             OÙ TROUVER L'INSPIRATION AU BURKINA ?
           </h2>
@@ -212,10 +287,18 @@
               <i
                 class="fas fa-angry text-red-500 text-3xl sm:text-5xl mb-3 sm:mb-4"
               ></i>
-              <h3 class="font-bold text-lg sm:text-xl mb-2">
+              <h3
+                class="font-bold text-lg sm:text-xl mb-2"
+                data-fr="Les Frustrations"
+                data-en="Frustrations"
+              >
                 Les Frustrations
               </h3>
-              <p class="text-xs sm:text-sm">
+              <p
+                class="text-xs sm:text-sm"
+                data-fr="C'est trop lent, C'est trop cher, C'est compliqué."
+                data-en="It's too slow, It's too expensive, It's complicated."
+              >
                 "C'est trop lent", "C'est trop cher", "C'est compliqué".
               </p>
             </div>
@@ -225,8 +308,18 @@
               <i
                 class="fas fa-eye text-blue-500 text-3xl sm:text-5xl mb-3 sm:mb-4"
               ></i>
-              <h3 class="font-bold text-lg sm:text-xl mb-2">L'Observation</h3>
-              <p class="text-xs sm:text-sm">
+              <h3
+                class="font-bold text-lg sm:text-xl mb-2"
+                data-fr="L'Observation"
+                data-en="Observation"
+              >
+                L'Observation
+              </h3>
+              <p
+                class="text-xs sm:text-sm"
+                data-fr="Regardez les files d'attente. Regardez les carnets papier."
+                data-en="Look at the queues. Look at paper notebooks."
+              >
                 Regardez les files d'attente. Regardez les carnets papier.
               </p>
             </div>
@@ -236,8 +329,18 @@
               <i
                 class="fas fa-copy text-yellow-600 text-3xl sm:text-5xl mb-3 sm:mb-4"
               ></i>
-              <h3 class="font-bold text-lg sm:text-xl mb-2">L'Importation</h3>
-              <p class="text-xs sm:text-sm">
+              <h3
+                class="font-bold text-lg sm:text-xl mb-2"
+                data-fr="L'Importation"
+                data-en="Importation"
+              >
+                L'Importation
+              </h3>
+              <p
+                class="text-xs sm:text-sm"
+                data-fr="Qu'est-ce qui marche à Accra ou Abidjan et qui manque ici ?"
+                data-en="What works in Accra or Abidjan that's missing here?"
+              >
                 Qu'est-ce qui marche à Accra ou Abidjan et qui manque ici ?
               </p>
             </div>
@@ -249,18 +352,22 @@
           <div class="h-full flex flex-col items-center justify-center">
             <h2
               class="text-xl sm:text-3xl font-bold mb-3 sm:mb-4 uppercase text-blue-900"
+              data-fr="Activité 1 : Le Détective"
+              data-en="Activity 1: The Detective"
             >
               Activité 1 : Le Détective
             </h2>
             <div
               class="bg-white p-6 sm:p-8 rounded-2xl shadow-xl border border-gray-200 w-full max-w-4xl text-center"
             >
-              <p class="text-lg sm:text-2xl mb-6 sm:mb-8">
+              <p
+                class="text-lg sm:text-2xl mb-6 sm:mb-8"
+                data-fr="Identifiez 3 problèmes irritants que vous avez rencontrés cette semaine."
+                data-en="Identify 3 irritating problems you encountered this week."
+              >
                 Identifiez <strong>3 problèmes irritants</strong> que vous avez
                 rencontrés cette semaine.
               </p>
-
-              <!-- Timer Interactive -->
               <div
                 class="text-4xl sm:text-6xl md:text-8xl font-mono font-bold text-gray-800 mb-4"
                 id="timer1"
@@ -276,19 +383,20 @@
                   style="width: 100%"
                 ></div>
               </div>
-
               <div class="flex justify-center gap-3 sm:gap-4">
                 <button
                   onclick="startTimer(10, 'timer1', 'progress1')"
                   class="bg-green-500 hover:bg-green-600 text-white px-4 sm:px-6 py-2 rounded-lg font-bold shadow transition text-sm sm:text-base"
                 >
-                  <i class="fas fa-play mr-1 sm:mr-2"></i> Lancer
+                  <i class="fas fa-play mr-1 sm:mr-2"></i>
+                  <span data-fr="Lancer" data-en="Start">Lancer</span>
                 </button>
                 <button
                   onclick="resetTimer(10, 'timer1', 'progress1')"
                   class="bg-gray-500 hover:bg-gray-600 text-white px-4 sm:px-6 py-2 rounded-lg font-bold shadow transition text-sm sm:text-base"
                 >
-                  <i class="fas fa-redo mr-1 sm:mr-2"></i> Reset
+                  <i class="fas fa-redo mr-1 sm:mr-2"></i>
+                  <span data-fr="Reset" data-en="Reset">Reset</span>
                 </button>
               </div>
             </div>
@@ -300,6 +408,8 @@
           <div class="h-full flex flex-col">
             <h2
               class="text-xl sm:text-3xl font-bold mb-4 sm:mb-6 text-center text-purple-900 px-2"
+              data-fr="Activité 2 : Le Mashup Solution"
+              data-en="Activity 2: The Solution Mashup"
             >
               Activité 2 : Le Mashup Solution
             </h2>
@@ -309,17 +419,31 @@
               >
                 <h3
                   class="font-bold text-base sm:text-xl mb-3 sm:mb-4 text-gray-600 text-center"
+                  data-fr="Choisissez 1 Problème"
+                  data-en="Choose 1 Problem"
                 >
                   Choisissez 1 Problème
                 </h3>
                 <div class="space-y-2 text-center text-sm sm:text-lg">
-                  <div class="p-2 sm:p-3 bg-white shadow rounded">
+                  <div
+                    class="p-2 sm:p-3 bg-white shadow rounded"
+                    data-fr="Attente à l'hôpital"
+                    data-en="Hospital waiting"
+                  >
                     Attente à l'hôpital
                   </div>
-                  <div class="p-2 sm:p-3 bg-white shadow rounded">
+                  <div
+                    class="p-2 sm:p-3 bg-white shadow rounded"
+                    data-fr="Trouver un logement"
+                    data-en="Finding housing"
+                  >
                     Trouver un logement
                   </div>
-                  <div class="p-2 sm:p-3 bg-white shadow rounded">
+                  <div
+                    class="p-2 sm:p-3 bg-white shadow rounded"
+                    data-fr="Gestion des déchets"
+                    data-en="Waste management"
+                  >
                     Gestion des déchets
                   </div>
                 </div>
@@ -338,29 +462,36 @@
               >
                 <h3
                   class="font-bold text-base sm:text-xl mb-3 sm:mb-4 text-purple-800 text-center"
+                  data-fr="Appliquez 1 Techno/Modèle"
+                  data-en="Apply 1 Tech/Model"
                 >
                   Appliquez 1 Techno/Modèle
                 </h3>
                 <div class="space-y-2 text-center text-sm sm:text-lg">
                   <div
                     class="p-2 sm:p-3 bg-white shadow rounded text-purple-700"
+                    data-fr="WhatsApp / SMS"
+                    data-en="WhatsApp / SMS"
                   >
                     WhatsApp / SMS
                   </div>
                   <div
                     class="p-2 sm:p-3 bg-white shadow rounded text-purple-700"
+                    data-fr="Livraison à domicile"
+                    data-en="Home delivery"
                   >
                     Livraison à domicile
                   </div>
                   <div
                     class="p-2 sm:p-3 bg-white shadow rounded text-purple-700"
+                    data-fr="Abonnement"
+                    data-en="Subscription"
                   >
                     Abonnement
                   </div>
                 </div>
               </div>
             </div>
-
             <div class="mt-4 sm:mt-6 text-center">
               <div
                 class="text-3xl sm:text-4xl font-mono font-bold text-purple-600"
@@ -371,6 +502,8 @@
               <button
                 onclick="startTimer(10, 'timer2', null)"
                 class="mt-2 text-xs sm:text-sm underline text-gray-500"
+                data-fr="Lancer Chrono"
+                data-en="Start Timer"
               >
                 Lancer Chrono
               </button>
@@ -383,13 +516,21 @@
           <div
             class="h-full flex flex-col items-center justify-center text-center px-2"
           >
-            <h2 class="text-2xl sm:text-4xl font-bold mb-6 sm:mb-8">
+            <h2
+              class="text-2xl sm:text-4xl font-bold mb-6 sm:mb-8"
+              data-fr="LA FORMULE MAGIQUE DU PITCH"
+              data-en="THE MAGIC PITCH FORMULA"
+            >
               LA FORMULE MAGIQUE DU PITCH
             </h2>
             <div
               class="bg-gray-50 p-6 sm:p-8 rounded-2xl border-2 border-dashed border-gray-300 max-w-4xl"
             >
-              <p class="text-lg sm:text-3xl leading-relaxed text-gray-800">
+              <p
+                class="text-lg sm:text-3xl leading-relaxed text-gray-800"
+                data-fr="Nous aidons [QUI ?] à résoudre [QUEL PROBLÈME ?] grâce à [QUELLE SOLUTION ?]."
+                data-en="We help [WHO?] to solve [WHAT PROBLEM?] through [WHAT SOLUTION?]."
+              >
                 "Nous aidons
                 <span class="text-blue-600 font-bold underline decoration-wavy"
                   >[QUI ?]</span
@@ -404,7 +545,11 @@
                 >."
               </p>
             </div>
-            <p class="mt-6 sm:mt-8 text-base sm:text-xl text-gray-500">
+            <p
+              class="mt-6 sm:mt-8 text-base sm:text-xl text-gray-500"
+              data-fr="Préparez-vous à présenter en 30 secondes !"
+              data-en="Get ready to present in 30 seconds!"
+            >
               Préparez-vous à présenter en 30 secondes !
             </p>
           </div>
@@ -417,6 +562,8 @@
           >
             <h2
               class="text-2xl sm:text-5xl font-bold mb-4 sm:mb-6 text-yellow-400"
+              data-fr="PASSEZ À L'ACTION !"
+              data-en="TAKE ACTION!"
             >
               PASSEZ À L'ACTION !
             </h2>
@@ -427,8 +574,18 @@
                 <i
                   class="fas fa-comments text-2xl sm:text-3xl mb-3 sm:mb-4 text-blue-300"
                 ></i>
-                <h3 class="font-bold mb-2 text-sm sm:text-base">Parlez-en</h3>
-                <p class="text-xs sm:text-sm opacity-80">
+                <h3
+                  class="font-bold mb-2 text-sm sm:text-base"
+                  data-fr="Parlez-en"
+                  data-en="Talk about it"
+                >
+                  Parlez-en
+                </h3>
+                <p
+                  class="text-xs sm:text-sm opacity-80"
+                  data-fr="À 5 personnes demain. Ne gardez pas l'idée secrète."
+                  data-en="To 5 people tomorrow. Don't keep the idea secret."
+                >
                   À 5 personnes demain. Ne gardez pas l'idée secrète.
                 </p>
               </div>
@@ -436,8 +593,18 @@
                 <i
                   class="fas fa-pencil-ruler text-2xl sm:text-3xl mb-3 sm:mb-4 text-green-300"
                 ></i>
-                <h3 class="font-bold mb-2 text-sm sm:text-base">Maquettez</h3>
-                <p class="text-xs sm:text-sm opacity-80">
+                <h3
+                  class="font-bold mb-2 text-sm sm:text-base"
+                  data-fr="Maquettez"
+                  data-en="Sketch"
+                >
+                  Maquettez
+                </h3>
+                <p
+                  class="text-xs sm:text-sm opacity-80"
+                  data-fr="Sur papier. Dessinez votre solution."
+                  data-en="On paper. Draw your solution."
+                >
                   Sur papier. Dessinez votre solution.
                 </p>
               </div>
@@ -445,22 +612,33 @@
                 <i
                   class="fas fa-users text-2xl sm:text-3xl mb-3 sm:mb-4 text-purple-300"
                 ></i>
-                <h3 class="font-bold mb-2 text-sm sm:text-base">
+                <h3
+                  class="font-bold mb-2 text-sm sm:text-base"
+                  data-fr="Rejoignez-nous"
+                  data-en="Join us"
+                >
                   Rejoignez-nous
                 </h3>
-                <p class="text-xs sm:text-sm opacity-80">
+                <p
+                  class="text-xs sm:text-sm opacity-80"
+                  data-fr="Prochaine session : Le Prototype."
+                  data-en="Next session: The Prototype."
+                >
                   Prochaine session : Le Prototype.
                 </p>
               </div>
             </div>
-            <h3 class="mt-6 sm:mt-12 text-base sm:text-xl opacity-75">
+            <h3
+              class="mt-6 sm:mt-12 text-base sm:text-xl opacity-75"
+              data-fr="Merci à tous !"
+              data-en="Thank you all!"
+            >
               Merci à tous !
             </h3>
           </div>
         </div>
       </div>
 
-      <!-- Footer Navigation -->
       <div
         class="bg-gray-50 p-3 sm:p-4 border-t border-gray-200 flex justify-between items-center flex-wrap gap-2"
       >
@@ -468,14 +646,16 @@
           onclick="changeSlide(-1)"
           class="text-gray-500 hover:text-blue-600 px-3 sm:px-4 py-2 font-semibold text-xs sm:text-base"
         >
-          <i class="fas fa-arrow-left mr-1 sm:mr-2"></i> Précédent
+          <i class="fas fa-arrow-left mr-1 sm:mr-2"></i>
+          <span data-fr="Précédent" data-en="Previous">Précédent</span>
         </button>
         <div class="flex gap-1 sm:gap-2" id="indicators"></div>
         <button
           onclick="changeSlide(1)"
           class="bg-blue-600 text-white px-4 sm:px-6 py-2 rounded-lg font-bold hover:bg-blue-700 shadow-md transition text-xs sm:text-base"
         >
-          Suivant <i class="fas fa-arrow-right ml-1 sm:ml-2"></i>
+          <span data-fr="Suivant" data-en="Next">Suivant</span>
+          <i class="fas fa-arrow-right ml-1 sm:ml-2"></i>
         </button>
       </div>
     </div>
@@ -490,22 +670,19 @@
             href="https://www.linkedin.com/in/sabf-sanon"
             class="flex items-center gap-2 hover:text-blue-400 transition-colors text-xs sm:text-base"
           >
-            <i class="fab fa-linkedin"></i>
-            <span>Abdoul Ben SANON</span>
+            <i class="fab fa-linkedin"></i> <span>Abdoul Ben SANON</span>
           </a>
           <a
             href="mailto:sabfsanon@gmail.com"
             class="flex items-center gap-2 hover:text-blue-400 transition-colors text-xs sm:text-base"
           >
-            <i class="fas fa-envelope"></i>
-            <span>sabfsanon@gmail.com</span>
+            <i class="fas fa-envelope"></i> <span>sabfsanon@gmail.com</span>
           </a>
           <a
             href="https://www.github.com/SABF226"
             class="flex items-center gap-2 hover:text-blue-400 transition-colors text-xs sm:text-base"
           >
-            <i class="fab fa-github"></i>
-            <span>SABF226</span>
+            <i class="fab fa-github"></i> <span>SABF226</span>
           </a>
         </div>
         <p class="text-xs text-gray-400">
@@ -515,6 +692,75 @@
     </footer>
 
     <script>
+      let currentLang = "fr";
+
+      function toggleLanguage() {
+        currentLang = currentLang === "fr" ? "en" : "fr";
+        document.documentElement.lang = currentLang;
+
+        // Update toggle switch
+        const toggleBtn = document.getElementById("langToggle");
+        const toggleKnob = document.getElementById("toggleKnob");
+        const frLabel = document.getElementById("frLabel");
+        const enLabel = document.getElementById("enLabel");
+
+        if (currentLang === "en") {
+          toggleBtn.classList.remove("bg-gray-300");
+          toggleBtn.classList.add("bg-blue-600");
+          toggleKnob.style.transform = "translateX(24px)";
+          frLabel.classList.remove("text-white");
+          frLabel.classList.add("text-gray-400");
+          enLabel.classList.remove("text-gray-400");
+          enLabel.classList.add("text-blue-600");
+        } else {
+          toggleBtn.classList.remove("bg-blue-600");
+          toggleBtn.classList.add("bg-gray-300");
+          toggleKnob.style.transform = "translateX(0)";
+          enLabel.classList.remove("text-blue-600");
+          enLabel.classList.add("text-gray-400");
+          frLabel.classList.remove("text-gray-400");
+          frLabel.classList.add("text-white");
+        }
+
+        // Update content
+        document.querySelectorAll("[data-fr][data-en]").forEach((el) => {
+          el.innerHTML = el.getAttribute("data-" + currentLang);
+        });
+        localStorage.setItem("preferredLang", currentLang);
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const savedLang = localStorage.getItem("preferredLang");
+        const toggleBtn = document.getElementById("langToggle");
+        const toggleKnob = document.getElementById("toggleKnob");
+        const frLabel = document.getElementById("frLabel");
+        const enLabel = document.getElementById("enLabel");
+
+        if (savedLang) {
+          currentLang = savedLang;
+          document.documentElement.lang = currentLang;
+
+          if (currentLang === "en") {
+            toggleBtn.classList.remove("bg-gray-300");
+            toggleBtn.classList.add("bg-blue-600");
+            toggleKnob.style.transform = "translateX(24px)";
+            frLabel.classList.remove("text-white");
+            frLabel.classList.add("text-gray-400");
+            enLabel.classList.remove("text-gray-400");
+            enLabel.classList.add("text-blue-600");
+          }
+        } else {
+          // Initialize FR state
+          frLabel.classList.add("text-white");
+          enLabel.classList.add("text-gray-400");
+        }
+
+        // Apply saved language to content
+        document.querySelectorAll("[data-fr][data-en]").forEach((el) => {
+          el.innerHTML = el.getAttribute("data-" + currentLang);
+        });
+      });
+
       let currentSlide = 0;
       const slides = document.querySelectorAll(".slide");
       const indicatorsContainer = document.getElementById("indicators");
@@ -522,7 +768,10 @@
 
       slides.forEach((_, idx) => {
         const dot = document.createElement("div");
-        dot.className = `h-2 w-2 rounded-full ${idx === 0 ? "bg-blue-600 w-4 sm:w-6" : "bg-gray-300"} transition-all duration-300`;
+        dot.className =
+          "h-2 w-2 rounded-full " +
+          (idx === 0 ? "bg-blue-600 w-4 sm:w-6" : "bg-gray-300") +
+          " transition-all duration-300";
         indicatorsContainer.appendChild(dot);
       });
 
@@ -553,22 +802,25 @@
         const display = document.getElementById(displayId);
         const bar = barId ? document.getElementById(barId) : null;
         const initialTime = time;
+        const timeEndFr = "TEMPS ÉCOULÉ !";
+        const timeEndEn = "TIME'S UP!";
 
         timerInterval = setInterval(() => {
           const min = Math.floor(time / 60);
           const sec = time % 60;
-          display.textContent = `${min < 10 ? "0" : ""}${min}:${sec < 10 ? "0" : ""}${sec}`;
+          display.textContent =
+            (min < 10 ? "0" : "") + min + ":" + (sec < 10 ? "0" : "") + sec;
 
           if (bar) {
             const percentage = (time / initialTime) * 100;
-            bar.style.width = `${percentage}%`;
+            bar.style.width = percentage + "%";
             if (percentage < 20)
               bar.classList.replace("bg-blue-600", "bg-red-500");
           }
 
           if (--time < 0) {
             clearInterval(timerInterval);
-            display.textContent = "TEMPS ÉCOULÉ !";
+            display.textContent = currentLang === "fr" ? timeEndFr : timeEndEn;
             if (bar) bar.style.width = "0%";
           }
         }, 1000);
@@ -577,7 +829,7 @@
       function resetTimer(minutes, displayId, barId) {
         clearInterval(timerInterval);
         document.getElementById(displayId).textContent =
-          `${minutes < 10 ? "0" : ""}${minutes}:00`;
+          (minutes < 10 ? "0" : "") + minutes + ":00";
         if (barId) {
           const bar = document.getElementById(barId);
           bar.style.width = "100%";
